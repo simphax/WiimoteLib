@@ -327,6 +327,10 @@ namespace WiimoteLib
 			{
 				Debug.WriteLine("OperationCanceledException");
 			}
+            catch (IOException)
+            {
+                Debug.WriteLine("IOException");
+            }
 		}
 
 		/// <summary>
