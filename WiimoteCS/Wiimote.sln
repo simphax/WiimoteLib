@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiimoteTest", "WiimoteTest\WiimoteTest.csproj", "{48223EAB-B2E0-4A64-9074-4444662EB693}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiimoteLib", "WiimoteLib\WiimoteLib.csproj", "{37A555DF-7012-4B99-8A47-1C922A361E52}"
