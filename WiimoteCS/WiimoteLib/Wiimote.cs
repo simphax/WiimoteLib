@@ -442,6 +442,10 @@ namespace WiimoteLib
 					mWiimoteState.Extension = false;
 					mWiimoteState.ExtensionType = ExtensionType.None;
 					return;
+                case ExtensionType.NewNunchuk:
+                    mWiimoteState.ExtensionType = ExtensionType.Nunchuk;
+					this.SetReportType(InputReport.ButtonsExtension, true);
+					break;
 				case ExtensionType.Nunchuk:
 				case ExtensionType.ClassicController:
 				case ExtensionType.Guitar:

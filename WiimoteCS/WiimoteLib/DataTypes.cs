@@ -769,6 +769,8 @@ namespace WiimoteLib
 		/// Nunchuk extension
 		/// </summary>
 		Nunchuk				= 0x0000a4200000,
+
+        NewNunchuk = 0xff00a4200000,
 		/// <summary>
 		/// Classic Controller extension
 		/// </summary>
