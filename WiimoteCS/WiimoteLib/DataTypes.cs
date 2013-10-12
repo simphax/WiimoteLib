@@ -769,12 +769,12 @@ namespace WiimoteLib
 		/// Nunchuk extension
 		/// </summary>
 		Nunchuk				= 0x0000a4200000,
-
-        NewNunchuk = 0xff00a4200000,
+        NewNunchuk          = 0xff00a4200000,
 		/// <summary>
 		/// Classic Controller extension
-		/// </summary>
-		ClassicController	= 0x0000a4200101,
+        /// </summary>
+        ClassicController   = 0x0000a4200101,
+        ClassicControllerPro = 0x0100a4200101,
 		/// <summary>
 		/// Guitar controller from Guitar Hero 3/WorldTour
 		/// </summary>
