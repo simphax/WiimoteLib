@@ -483,19 +483,19 @@ namespace WiimoteLib
 				case ExtensionType.ClassicController:
 					buff = ReadData(REGISTER_EXTENSION_CALIBRATION, 16);
 
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MaxXL = (byte)(buff[0] >> 2);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MinXL = (byte)(buff[1] >> 2);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MidXL = (byte)(buff[2] >> 2);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MaxYL = (byte)(buff[3] >> 2);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MinYL = (byte)(buff[4] >> 2);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MidYL = (byte)(buff[5] >> 2);
+					mWiimoteState.ClassicControllerState.CalibrationInfo.MaxXL = (byte)(buff[0] >> 2) > 0 ? (byte)(buff[0] >> 2) : (byte)64;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MinXL = (byte)(buff[1] >> 2) > 0 ? (byte)(buff[1] >> 2) : (byte)0;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MidXL = (byte)(buff[2] >> 2) > 0 ? (byte)(buff[2] >> 2) : (byte)32;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MaxYL = (byte)(buff[3] >> 2) > 0 ? (byte)(buff[3] >> 2) : (byte)64;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MinYL = (byte)(buff[4] >> 2) > 0 ? (byte)(buff[4] >> 2) : (byte)0;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MidYL = (byte)(buff[5] >> 2) > 0 ? (byte)(buff[5] >> 2) : (byte)32;
 
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MaxXR = (byte)(buff[6] >> 3);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MinXR = (byte)(buff[7] >> 3);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MidXR = (byte)(buff[8] >> 3);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MaxYR = (byte)(buff[9] >> 3);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MinYR = (byte)(buff[10] >> 3);
-					mWiimoteState.ClassicControllerState.CalibrationInfo.MidYR = (byte)(buff[11] >> 3);
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MaxXR = (byte)(buff[6] >> 3) > 0 ? (byte)(buff[6] >> 3) : (byte)32;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MinXR = (byte)(buff[7] >> 3) > 0 ? (byte)(buff[7] >> 3) : (byte)0;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MidXR = (byte)(buff[8] >> 3) > 0 ? (byte)(buff[8] >> 3) : (byte)16;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MaxYR = (byte)(buff[9] >> 3) > 0 ? (byte)(buff[9] >> 3) : (byte)32;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MinYR = (byte)(buff[10] >> 3) > 0 ? (byte)(buff[10] >> 3) : (byte)0;
+                    mWiimoteState.ClassicControllerState.CalibrationInfo.MidYR = (byte)(buff[11] >> 3) > 0 ? (byte)(buff[11] >> 3) : (byte)16;
 
 					// this doesn't seem right...
 //					mWiimoteState.ClassicControllerState.AccelCalibrationInfo.MinTriggerL = (byte)(buff[12] >> 3);
